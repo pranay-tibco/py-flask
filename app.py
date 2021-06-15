@@ -43,6 +43,11 @@ def shutdown():
     shutdown_server()
     return 'Server shutting down...'
 
+
+@app.route('/healthz', methods=['GET'])
+def healthz():
+    return 'All is well'
+
 if __name__ == "__main__":
     httpPort = 8080
     if 'HTTP_PORT' in os.environ:
