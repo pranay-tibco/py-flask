@@ -21,7 +21,7 @@ def visits():
         session['visits'] = session.get('visits') + 1  # reading and updating session data
     else:
         session['visits'] = 1  # setting session data
-    return "Hello from Server [" + socket.gethostname() \
+    return "Hello from k8s day-to-day Server [" + socket.gethostname() \
            + "] Total visitors on this server : {}".format(session.get('visits'))
 
 
